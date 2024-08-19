@@ -7,33 +7,20 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-
-  // console.log(email);
-
   const handleLogin = (e) => {
     e.preventDefault();
-    // localStorage.getItem("email", email);
-    // localStorage.getItem("password", password);
 
-    
-      if (email == "a" && password == "a") {
-        // console.log('try isledi')
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
-        // console.log(localStorage.getItem("email"))
-        // console.log(localStorage.getItem("password"))
-        return navigate("/home");
-      } else {
-        // console.log('else isledi')
-        navigate("/");
-      }
+    if (email == "a" && password == "a") {
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+
+      return navigate("/home");
+    } else {
+      navigate("/");
+      alert('False')
     }
+  };
 
-  const getEmail = localStorage.getItem("email");
-  const getPassword = localStorage.getItem("password");
-
-  console.log("getemail",getEmail)
-  
   return (
     <>
       <section id="registration">

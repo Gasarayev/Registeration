@@ -5,15 +5,12 @@ import PropTypes from "prop-types";
 const getEmail = localStorage.getItem("email");
 const getPassword = localStorage.getItem("password");
 
-console.log("private", getEmail)
-
 
 const PrivateRoute = ({ children }) => {
   
-
-  if(!getEmail == "a" && !getPassword == "a"){
+  if(getEmail !== "a" && getPassword !== "a"){
    
-   return Navigate("/")
+   return <Navigate to={'/'}/>
 
   }
   
