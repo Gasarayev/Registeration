@@ -71,19 +71,11 @@
   outline: none;
 }
 
-.form-group label {
-  position: absolute;
-  top: -1px;
-  left: 10px;
+.form-group input::placeholder {
   color: #ffffff;
   margin: 0;
   font-size: 14px;
   transition: 0.5s;
-}
-
-.form-group input:focus + label {
-  top: -19px;
-  left: 0;
 }
 
 .form-button {
