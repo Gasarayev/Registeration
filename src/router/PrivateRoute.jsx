@@ -1,21 +1,16 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const getEmail = localStorage.getItem("email");
-const getPassword = localStorage.getItem("password");
-
-
 const PrivateRoute = ({ children }) => {
-  
-  if(getEmail !== "a" && getPassword !== "a"){
-   
-   return <Navigate to={'/'}/>
+  const getEmail = localStorage.getItem("email");
+  const getPassword = localStorage.getItem("password");
 
+  if (getEmail !== "a" || getPassword !== "a") {
+    return <Navigate to={"/"} />;
   }
-  
-  return children
- 
+
+  return children;
 };
 
 PrivateRoute.propTypes = {

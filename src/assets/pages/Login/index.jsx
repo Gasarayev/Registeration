@@ -14,10 +14,10 @@ function Login() {
       localStorage.setItem("email", email);
       localStorage.setItem("password", password);
 
-      return navigate("/home");
+      navigate("/home");
     } else {
       navigate("/");
-      alert('False')
+      alert("False");
     }
   };
 
@@ -57,7 +57,7 @@ function Login() {
                     <input
                       autoComplete="off"
                       id="login-password"
-                      type="text"
+                      type="password"
                       name="loginPassword"
                       required
                       value={password}
