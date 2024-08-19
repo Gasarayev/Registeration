@@ -7,8 +7,10 @@ import Home from "./assets/pages/Home/index.jsx";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [getEmail, setEmail] = useState('')
 
-
+  console.log("getEmail-",getEmail)
+  console.log(setEmail)
   const handleLogin = () => {
    
       setIsAuthenticated(true);
@@ -18,9 +20,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route path="/login" element={<Login onLogin={handleLogin} setEmail={getEmail} />} />
         <Route
-          path="/"
+          path="/home"
           element={
             <PrivateRoute Component={Home} isAuthenticated={isAuthenticated} />
           }

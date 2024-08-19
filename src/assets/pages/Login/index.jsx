@@ -7,25 +7,28 @@ function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const getEmail = localStorage.setItem("emailInfo", "gasar@gmail.com");
-  const getPassword = localStorage.setItem("passwordinfo", "12345");
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (email == "gasar@gmail.com" && password == "12345") {
-      getEmail;
-      getPassword;
+
+      localStorage.setItem("emailInfo", email);
+      localStorage.setItem("passwordInfo", password);
+
       onLogin();
-      navigate("/");
+      navigate("/home");
     } else {
       alert("Incorrect username or password");
     }
   };
 
+  const getEmail = localStorage.getItem("emailInfo");
+  const getPassword = localStorage.getItem("passwordInfo");
+
   return (
     <>
       {getEmail && getPassword ? (
-        <Home />
+        <Home/>
       ) : (
         <section id="registration">
           <div className="login">
