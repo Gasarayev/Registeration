@@ -1,0 +1,57 @@
+#registration {
+    background-image: url("https://app.morooq.com/Content/UIContent/images/registrBackground.png");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  .content {
+    width: 370px;
+    background: linear-gradient(-45deg, #a9508a, #ec2a7b);
+    border-radius: 7px;
+  }
+  
+  .head {
+    display: flex;
+  }
+  
+  .head .signIn,
+  .signUp {
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    background: #ffffff;
+    color: #a9508a;
+  }
+  
+
+  .signIn{
+    border-top-left-radius: 7px;
+    
+  }
+
+  .signUp{
+    border-top-right-radius: 7px;
+    border: 1px solid transparent;
+  }
+
+  .head .active {
+    background: transparent;
+    color: #fff;
+  }
+  
+  .body {
+    padding: 30px;
+  }

@@ -3,11 +3,10 @@ import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const PrivateRoute = ({ children }) => {
-  const getEmail = localStorage.getItem("email");
-  const getPassword = localStorage.getItem("password");
+  const token = localStorage.getItem("authToken");
 
-  if (getEmail !== "a" || getPassword !== "a") {
-    return <Navigate to={"/"} />;
+  if (!token) {
+    return <Navigate to="/" />;
   }
 
   return children;

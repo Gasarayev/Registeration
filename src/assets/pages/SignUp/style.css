@@ -1,0 +1,50 @@
+
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
+  accent-color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="radio"].signIn_entinty:checked + label {
+  background-color: transparent;
+}
+
+.signIn_form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.signIn_entinty {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  line-height: 25px;
+}
+
+.signIn_entinty > label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nationality_country {
+  padding: 0px 5px;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  margin: 0;
+  outline: none;
+  font-size: 14px;
+}
+
+
+.signUp_btn{
+    cursor: pointer;
+}
+
